@@ -1,10 +1,211 @@
 ---
-import Legal from '../layouts/Legal.astro';
+const appStoreUrl = "https://apps.apple.com/app/swahiliflow/id6744253982";
 ---
 
-<Legal title="Legal" lastUpdated="March 23, 2026">
-  <ul>
-    <li><a href="privacy">Privacy Policy</a></li>
-    <li><a href="terms">Terms of Use</a></li>
-  </ul>
-</Legal>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SwahiliFlow — Learn Swahili with AI</title>
+    <meta name="description" content="Master Swahili through AI-powered conversations, personalized roadmaps, and interactive lessons." />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: #fff;
+        background: #0a0a0f;
+        overflow-x: hidden;
+      }
+
+      /* Hero */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        background: radial-gradient(ellipse at 50% 30%, rgba(255,140,0,0.12) 0%, transparent 70%);
+      }
+
+      .logo {
+        width: 96px;
+        height: 96px;
+        border-radius: 22px;
+        margin-bottom: 2rem;
+        background: #FF8C00;
+        box-shadow: 0 8px 32px rgba(255,140,0,0.3);
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero h1 span { color: #FF8C00; }
+
+      .hero .tagline {
+        font-size: clamp(1rem, 2.5vw, 1.35rem);
+        color: rgba(255,255,255,0.6);
+        margin-bottom: 2.5rem;
+        max-width: 500px;
+      }
+
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #FF8C00;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 20px rgba(255,140,0,0.35);
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(255,140,0,0.45);
+      }
+
+      /* Features */
+      .features {
+        padding: 5rem 2rem;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      .features h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .feature-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 2rem;
+        transition: border-color 0.2s;
+      }
+
+      .feature-card:hover {
+        border-color: rgba(255,140,0,0.3);
+      }
+
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-card p {
+        color: rgba(255,255,255,0.55);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 3rem 2rem;
+        border-top: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: rgba(255,255,255,0.45);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .footer-links a:hover { color: #FF8C00; }
+
+      .copyright {
+        font-size: 0.8rem;
+        color: rgba(255,255,255,0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <img src="/legal/appicon.png" alt="SwahiliFlow" class="logo" />
+      <h1>Learn Swahili with <span>AI</span></h1>
+      <p class="tagline">Master Swahili through AI-powered conversations, personalized roadmaps, and interactive lessons.</p>
+      <a href={appStoreUrl} class="cta-btn">Download on the App Store</a>
+    </section>
+
+    <section class="features">
+      <h2>Why SwahiliFlow?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🗣</div>
+          <h3>AI Conversations</h3>
+          <p>Practice real Swahili dialogue with AI-powered roleplay scenarios tailored to everyday situations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺</div>
+          <h3>Personalized Roadmap</h3>
+          <p>Get assessed on your level and receive a custom learning plan built around your strengths and gaps.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Grammar & Tenses</h3>
+          <p>Explore Swahili parts of speech and tenses with clear explanations and real-world examples.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>200+ Conversations</h3>
+          <p>Learn from native Swahili conversations across greetings, travel, business, culture, and more.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Vocabulary Builder</h3>
+          <p>Build your word bank with categorized vocabulary sets and track your progress over time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Everyday Sentences</h3>
+          <p>Master common phrases and sentences you'll actually use in daily Swahili interactions.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="privacy">Privacy Policy</a>
+        <a href="terms">Terms of Use</a>
+        <a href="support">Support</a>
+        <a href={`mailto:avitussweetbert213@gmail.com`}>Contact</a>
+      </div>
+      <p class="copyright">&copy; {new Date().getFullYear()} SwahiliFlow. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
