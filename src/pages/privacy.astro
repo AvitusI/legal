@@ -29,8 +29,8 @@ import Legal from '../layouts/Legal.astro';
   <h2>4. AI-Powered Features and Data Sharing</h2>
   <p>SwahiliFlow uses artificial intelligence to power interactive learning features. When you use these features, certain data is sent to third-party AI services for processing:</p>
   <ul>
-    <li><strong>Live Roleplay:</strong> Your voice audio is transmitted in real time to <strong>Daily.co</strong> (WebRTC infrastructure) and our AI backend for speech recognition and response generation. The AI processes your spoken words to generate contextual Swahili conversation responses. Audio is streamed in real time and is not stored permanently by Daily.co.</li>
-    <li><strong>Roadmap Assessments:</strong> Your written answers and spoken responses are sent to our AI backend to evaluate your Swahili proficiency and generate a personalized learning plan.</li>
+    <li><strong>Live Roleplay:</strong> Your voice audio is transmitted in real time to <strong>Daily.co</strong> (WebRTC audio streaming and real-time AI conversation). After the session, your conversation transcript is sent to <strong>OpenAI</strong> to generate performance feedback. Transcripts are saved to your account for future reference. Audio is streamed in real time and is not stored permanently by Daily.co.</li>
+    <li><strong>Roadmap Assessments:</strong> Your spoken responses are streamed via <strong>Daily.co</strong> (audio streaming and real-time AI conversation). Your answers are then sent to <strong>OpenAI</strong> to evaluate your Swahili proficiency and generate a personalized learning plan. Results are saved to your account.</li>
   </ul>
   <p>We only send the minimum data necessary to provide these features. Conversation transcripts and assessment results are saved to your account for future reference and to support your learning progress. Your data is not used for advertising or sold to third parties.</p>
 
@@ -38,6 +38,7 @@ import Legal from '../layouts/Legal.astro';
   <p>We use the following third-party services:</p>
   <ul>
     <li><strong>Daily.co:</strong> Real-time voice and audio streaming for live roleplay conversations.</li>
+    <li><strong>OpenAI:</strong> AI-powered feedback generation and assessment evaluation.</li>
     <li><strong>Firebase (Google):</strong> Authentication, cloud storage, analytics, and real-time data sync.</li>
     <li><strong>Apple Sign In / Google Sign In:</strong> Secure account authentication.</li>
     <li><strong>Apple In-App Purchases:</strong> Subscription management and payment processing.</li>
